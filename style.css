@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #FFF5F7; /* Un tono rosado/pastel muy suave */
+    color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 400px;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #D81B60;
+}
+
+header p {
+    color: #666;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.action-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(216, 27, 96, 0.08);
+}
+
+.action-card h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.btn-primary {
+    background-color: #D81B60;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary:active {
+    transform: scale(0.96);
+    background-color: #C2185B;
+}
+
+/* Estilos del Calendario */
+.calendar-section h3 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #666;
+    background-color: #f0f0f0;
+}
+
+/* Estados de los días */
+.day.taken {
+    background-color: #4CAF50; /* Verde: tomada */
+    color: white;
+}
+
+.day.missed {
+    background-color: #FF5252; /* Rojo: olvidada */
+    color: white;
+}
+
+.day.future {
+    background-color: transparent;
+    color: #bbb;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mi Recordatorio</title>
+    <!-- Aquí iría tu manifest.json para que sea instalable -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" href="incono.jpg">
+
+    <!-- ... tus otros tags ... -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(function(OneSignal) {
+        OneSignal.init({
+          appId: "TU_APP_ID_DE_ONESIGNAL", // Te lo dan al crear la cuenta
+          safari_web_id: "web.onesignal.auto.tu_id",
+          notifyButton: {
+            enable: true, // Muestra un botón para que ella acepte los permisos la primera vez
+          },
+        });
+      });
+    </script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Hola, Natalia ✨</h1>
+            <p id="fecha-hoy"></p>
+        </header>
+
+        <section class="action-card">
+            <h2 id="status-message">¿Ya tomaste tu pastilla hoy?</h2>
+            <button id="btn-tomar" class="btn-primary">¡Ya la tomé!</button>
+        </section>
+
+        <section class="calendar-section">
+            <h3>Tu historial de este mes</h3>
+            <div class="calendar-grid" id="calendar-grid">
+                <!-- El calendario se generará con JavaScript -->
+            </div>
+        </section>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
