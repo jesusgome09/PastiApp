@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #FFF5F7; /* Un tono rosado/pastel muy suave */
+    background-color: #FFF5F7;
     color: #333;
     display: flex;
     justify-content: center;
@@ -70,7 +70,6 @@ header p {
     background-color: #C2185B;
 }
 
-/* Estilos del Calendario */
 .calendar-section h3 {
     font-size: 16px;
     color: #555;
@@ -99,14 +98,13 @@ header p {
     background-color: #f0f0f0;
 }
 
-/* Estados de los días */
 .day.taken {
-    background-color: #4CAF50; /* Verde: tomada */
+    background-color: #4CAF50;
     color: white;
 }
 
 .day.missed {
-    background-color: #FF5252; /* Rojo: olvidada */
+    background-color: #FF5252;
     color: white;
 }
 
